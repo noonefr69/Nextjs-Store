@@ -6,6 +6,8 @@ export default async function Loved() {
   const res = await fetch("https://fakestoreapi.com/products/");
   const data = await res.json();
 
+  const dataFilter = data.filter((dat) => dat.rating.rate > 4);
+
   return (
     <div className="mt-28 px-7 md:px-14 max-w-[1440px] mx-auto">
       <h1 className="text-center font-bold text-2xl md:text-4xl">
@@ -13,11 +15,11 @@ export default async function Loved() {
       </h1>
       <div className="h-[3px] mx-auto my-7 mb-16 w-7 bg-[#1B9C85]" />
       <div className="flex flex-col text-center md:flex-row md:gap-10">
-        {data.slice(15, 19).map((dat) => (
+        {dataFilter.slice(0,4).map((dat) => (
           <Link
             className="flex flex-col items-center w-full mx-auto shadow-sm p-2 rounded mb-7 md:mb-0"
             key={dat.id}
-            href={`/${dat.id}`}
+            href={`/products/${dat.id}`}
           >
             <Image
               src={dat.image}

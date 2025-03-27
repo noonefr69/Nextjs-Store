@@ -18,7 +18,7 @@ export default async function Featured() {
           <Link
             className="flex flex-col items-center w-full mx-auto shadow-sm p-2 rounded mb-7 md:mb-0"
             key={dat.id}
-            href={`/${dat.id}`}
+            href={`/products/${dat.id}`}
           >
             <Image
               src={dat.image}
