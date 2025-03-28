@@ -39,19 +39,19 @@ export default function Footer() {
           <div className="mb-4 flex flex-col gap-1">
             <Link
               className="duration-150 hover:text-[#1B9C85] w-fit"
-              href={`/`}
+              href={`/about`}
             >
               Know More About Us
             </Link>
             <Link
               className="duration-150 hover:text-[#1B9C85] w-fit"
-              href={`/`}
+              href={`/products`}
             >
               Visit Store
             </Link>
             <Link
               className="duration-150 hover:text-[#1B9C85] w-fit"
-              href={`/`}
+              href={`/contact`}
             >
               Let’s Connect
             </Link>

@@ -12,7 +12,7 @@ import { Slider } from "@/components/ui/slider";
 import { PriceFilter } from "@/components/PriceFilter";
 
 export default async function Products() {
-  const res = await fetch("https://fakestoreapi.com/products/");
+  const res = await fetch("https://fakestoreapi.com/products");
   const data = await res.json();
 
   return (
@@ -105,7 +105,7 @@ export default async function Products() {
               <Link
                 className="flex flex-col text-center items-center w-full mx-auto shadow-sm p-2 rounded mb-7 md:mb-0"
                 key={dat.id}
-                href={`/${dat.id}`}
+                href={`/products/${dat.id}`}
               >
                 <Image
                   src={dat.image}
