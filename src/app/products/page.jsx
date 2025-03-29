@@ -43,7 +43,7 @@ export default async function Products() {
                 <span className="text-zinc-900">( 5 )</span>
               </li>
               <li className="flex items-center justify-between text-[#1b9c84d7]">
-                <span>men's clothing"</span>
+                <span>men's clothing</span>
                 <span className="text-zinc-900">( 5 )</span>
               </li>
               <li className="flex items-center justify-between text-[#1b9c84d7]">
@@ -54,7 +54,7 @@ export default async function Products() {
           </div>
         </aside>
 
-        <div className="h-full w-[2px] hidden md:block bg-[#00000015]"></div>
+        <div className="h-full w-[2px] mx-auto hidden md:block bg-[#00000015] col-span-1"></div>
 
         <section className="col-span-6 pt-10 md:p-7">
           <h6 className="hidden md:block text-zinc-600 md:mb-8">
