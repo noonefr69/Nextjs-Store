@@ -2,13 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaStar } from "react-icons/fa";
 import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
@@ -23,13 +16,19 @@ export default async function Products({ searchParams }) {
   const res = await fetch("https://fakestoreapi.com/products");
   const data = await res.json();
 
-  const sortedLowToHigh = [...data].sort((a, b) => a.price - b.price);
-  const sortedHighToLow = [...data].sort((a, b) => b.price - a.price);
-  const sortedByPopularity = [...data].sort(
+  console.log(data);
+
+  const womenCloth = data.filter((item) => {
+    return item.category == "women's clothing";
+  });
+
+  const sortedLowToHigh = [...womenCloth].sort((a, b) => a.price - b.price);
+  const sortedHighToLow = [...womenCloth].sort((a, b) => b.price - a.price);
+  const sortedByPopularity = [...womenCloth].sort(
     (a, b) => b.rating.rate - a.rating.rate
   );
 
-  let displayData = data;
+  let displayData = womenCloth;
   if (searchParams.sort == "popularity") {
     displayData = sortedByPopularity;
   } else if (searchParams.sort == "lowToHigh") {
@@ -66,13 +65,13 @@ export default async function Products({ searchParams }) {
                 >
                   electronics
                 </Link>
-                <span className="text-zinc-900">( 5 )</span>
+                <span className="text-zinc-900">( 6 )</span>
               </li>
               <li className="flex items-center justify-between text-[#1b9c84d7]">
                 <Link className="hover:underline" href={`/products/jewelery`}>
                   jewelery
                 </Link>
-                <span className="text-zinc-900">( 5 )</span>
+                <span className="text-zinc-900">( 4 )</span>
               </li>
               <li className="flex items-center justify-between text-[#1b9c84d7]">
                 <Link
@@ -81,7 +80,7 @@ export default async function Products({ searchParams }) {
                 >
                   men's clothing
                 </Link>
-                <span className="text-zinc-900">( 5 )</span>
+                <span className="text-zinc-900">( 4 )</span>
               </li>
               <li className="flex items-center justify-between text-[#1b9c84d7]">
                 <Link
@@ -90,7 +89,7 @@ export default async function Products({ searchParams }) {
                 >
                   women's clothing
                 </Link>
-                <span className="text-zinc-900">( 5 )</span>
+                <span className="text-zinc-900">( 6 )</span>
               </li>
             </ul>
           </div>
@@ -126,7 +125,7 @@ export default async function Products({ searchParams }) {
                 <DropdownMenuItem className={`m-0 p-0`}>
                   <Link
                     className="text-zinc-700  duration-150 hover:bg-[#00000008] rounded py-1 px-2 cursor-pointer w-full h-full"
-                    href="/products"
+                    href="/products/women's-clothing"
                   >
                     Sort by default
                   </Link>
@@ -135,7 +134,7 @@ export default async function Products({ searchParams }) {
                   {" "}
                   <Link
                     className="text-zinc-700  duration-150 hover:bg-[#00000008] rounded py-1 px-2 cursor-pointer w-full h-full"
-                    href="/products?sort=popularity"
+                    href="/products/women's-clothing?sort=popularity"
                   >
                     Sort by popularity
                   </Link>
@@ -144,7 +143,7 @@ export default async function Products({ searchParams }) {
                   {" "}
                   <Link
                     className="text-zinc-700  duration-150 hover:bg-[#00000008] rounded py-1 px-2 cursor-pointer w-full h-full"
-                    href="/products?sort=lowToHigh"
+                    href="/products/women's-clothing?sort=lowToHigh"
                   >
                     Sort by price: low to high
                   </Link>
@@ -153,39 +152,13 @@ export default async function Products({ searchParams }) {
                   {" "}
                   <Link
                     className="text-zinc-700  duration-150 hover:bg-[#00000008] rounded py-1 px-2 cursor-pointer w-full h-full"
-                    href="/products?sort=highToLow"
+                    href="/products/women's-clothing?sort=highToLow"
                   >
                     Sort by price: high to low
                   </Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
-
-            {/* <Select>
-              <SelectTrigger className="w-[210px] text-zinc-600 cursor-pointer rounded">
-                <SelectValue placeholder="Default" className="text-zinc-600" />
-              </SelectTrigger>
-              <SelectContent className={`w-[210px] rounded`} align="center">
-                <SelectItem value="default">
-                  <Link href="/products">Sort by default</Link>
-                </SelectItem>
-                <SelectItem value="popularity">
-                  <Link href="/products?sort=popularity">
-                    Sort by popularity
-                  </Link>
-                </SelectItem>
-                <SelectItem value="lowToHigh">
-                  <Link href="/products?sort=lowToHigh">
-                    Sort by price: low to high
-                  </Link>
-                </SelectItem>
-                <SelectItem value="HighToLow">
-                  <Link href="/products?sort=HighToLow">
-                    Sort by price: high to low
-                  </Link>
-                </SelectItem>
-              </SelectContent>
-            </Select> */}
           </nav>
           <div className="md:grid md:grid-cols-3 md:gap-4">
             {displayData.map((dat) => (
