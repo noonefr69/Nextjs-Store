@@ -116,7 +116,7 @@ export default async function Products({ searchParams }) {
           </h1>
           <nav className="flex justify-between items-center mb-4 md:mb-7">
             <span className="text-zinc-600 md:w-fit">
-              Showing 1–20 of 20 results
+              Showing 1-4 of 4 results
             </span>
             <DropdownMenu>
               <DropdownMenuTrigger className="w-[210px] shadow-sm bg-white duration-150 hover:bg-[#00000008] py-1 text-zinc-600 cursor-pointer rounded">

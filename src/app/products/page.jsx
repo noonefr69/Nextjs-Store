@@ -66,13 +66,13 @@ export default async function Products({ searchParams }) {
                 >
                   electronics
                 </Link>
-                <span className="text-zinc-900">( 5 )</span>
+                <span className="text-zinc-900">( 6 )</span>
               </li>
               <li className="flex items-center justify-between text-[#1b9c84d7]">
                 <Link className="hover:underline" href={`/products/jewelery`}>
                   jewelery
                 </Link>
-                <span className="text-zinc-900">( 5 )</span>
+                <span className="text-zinc-900">( 4 )</span>
               </li>
               <li className="flex items-center justify-between text-[#1b9c84d7]">
                 <Link
@@ -81,7 +81,7 @@ export default async function Products({ searchParams }) {
                 >
                   men's clothing
                 </Link>
-                <span className="text-zinc-900">( 5 )</span>
+                <span className="text-zinc-900">( 4 )</span>
               </li>
               <li className="flex items-center justify-between text-[#1b9c84d7]">
                 <Link
@@ -90,7 +90,7 @@ export default async function Products({ searchParams }) {
                 >
                   women's clothing
                 </Link>
-                <span className="text-zinc-900">( 5 )</span>
+                <span className="text-zinc-900">( 6 )</span>
               </li>
             </ul>
           </div>
@@ -110,7 +110,7 @@ export default async function Products({ searchParams }) {
           </h1>
           <nav className="flex justify-between items-center mb-4 md:mb-7">
             <span className="text-zinc-600 md:w-fit">
-              Showing 1–20 of 20 results
+              Showing 1-20 of 20 results
             </span>
             <DropdownMenu>
               <DropdownMenuTrigger className="w-[210px] shadow-sm bg-white duration-150 hover:bg-[#00000008] py-1 text-zinc-600 cursor-pointer rounded">
