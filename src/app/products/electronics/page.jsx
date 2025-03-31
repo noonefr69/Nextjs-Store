@@ -50,7 +50,7 @@ export default async function Products({ searchParams }) {
             <Link className="duration-100 hover:text-[#1B9C85]" href={`/`}>
               Home
             </Link>{" "}
-            / Shop
+            / electronics
           </h6>
           <h1 className="block md:hidden text-4xl my-7 md:text-6xl text-[#1B9C85] md:mb-20">
             Shop
