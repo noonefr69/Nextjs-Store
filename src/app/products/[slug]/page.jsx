@@ -24,10 +24,9 @@ export default async function ItemDetails({ params }) {
 
   const product = await getProduct(params.slug);
 
-  const relatedData = data.filter((item) => item.category === product.category);
-  //   const deleteActive = data.filter((item) => item.id !== product.id);
-  //   const relateddData = filterCategory.concat(deleteActive);
-
+  const relatedData = data.filter(
+    (item) => item.category === product.category && item.id !== product.id
+  );
   return (
     <div>
       <div className="max-w-[1000px] mx-auto bg-white shadow-sm px-7 md:px-14 md:my-20">
@@ -61,7 +60,11 @@ export default async function ItemDetails({ params }) {
             <div className="text-zinc-700 flex items-center gap-2">
               Category:
               <span className="text-[#1B9C85] capitalize">
-                {product.category}
+                <Link
+                  href={`/products/${product.category.replace(/\s+/g, "-")}`}
+                >
+                  {product.category}
+                </Link>
               </span>
             </div>
           </div>
@@ -69,7 +72,9 @@ export default async function ItemDetails({ params }) {
         <div className="mt-16 md:mt-0">
           <div className="border-t">
             <Tabs defaultValue="description" className="w-full">
-              <TabsList className={`rounded-none bg-transparent text-center items-center justify-center flex w-full md:w-fit`}>
+              <TabsList
+                className={`rounded-none bg-transparent text-center items-center justify-center flex w-full md:w-fit`}
+              >
                 <TabsTrigger
                   value="description"
                   className={`cursor-pointer rounded-none text-lg`}
