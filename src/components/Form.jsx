@@ -8,19 +8,27 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
 const formSchema = z.object({
-  email: z.string().min(2).max(50).email(),
-  username: z.string().min(2).max(50),
-  message: z.string().min(2).max(500),
+  email: z
+    .string()
+    .min(2, { message: "It does not look like Email." })
+    .max(50, { message: "It does not look like Email." })
+    .email({ message: "It does not look like Email." }),
+  username: z
+    .string()
+    .min(2, { message: "Username must be at least 2 characters long." })
+    .max(50, { message: "Username must be at most 50 characters long." }),
+  message: z
+    .string()
+    .min(2, { message: "Message must be at least 2 characters long." })
+    .max(500, { message: "Message must be at most 500 characters long." }),
 });
 
 export function ProfileForm() {
@@ -34,7 +42,9 @@ export function ProfileForm() {
   });
 
   function onSubmit(values) {
-    console.log(values);
+    // console.log(values);
+
+    form.reset();
   }
 
   return (

@@ -69,8 +69,6 @@ export function ShopContextProvider(props) {
     products,
   };
 
-  console.log(cartItems);
-
   return (
     <ShopContext.Provider value={contextValue}>
       {props.children}

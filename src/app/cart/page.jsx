@@ -70,7 +70,7 @@ export default function Cart() {
 
   return (
     <div className="px-7 my-30 md:px-14 max-w-[1440px] mx-auto">
-      <Table>
+      <Table className={``}>
         <TableHeader>
           <TableRow>
             <TableHead className="w-[100px]">Product</TableHead>
@@ -151,7 +151,7 @@ export default function Cart() {
       )}
 
       <span className="text-center flex items-center justify-center mt-16">
-        It is not fullstack so there is no payment {"<"}3{" "}
+        It is not fullstack app so there is no payment {"<"}3{" "}
       </span>
     </div>
   );
