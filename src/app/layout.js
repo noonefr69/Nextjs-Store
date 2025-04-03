@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 import Footer from "@/components/Footer";
+import { ShopContextProvider } from "@/context/shopContext";
 
 export const metadata = {
   title: "Create Next App",
@@ -12,9 +13,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="bg-zinc-50">
         <div>
-          <Navbar />
-          {children}
-          <Footer />
+          <ShopContextProvider>
+            <Navbar />
+            {children}
+            <Footer />
+          </ShopContextProvider>
         </div>
       </body>
     </html>

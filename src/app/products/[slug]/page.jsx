@@ -2,16 +2,9 @@ import Image from "next/image";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Link from "next/link";
 import { FaStar } from "react-icons/fa";
-
-export async function generateStaticParams() {
-  const posts = await fetch("https://fakestoreapi.com/products").then((res) =>
-    res.json()
-  );
-
-  return posts.map((post) => ({
-    slug: post.id.toString(),
-  }));
-}
+import AddToCart from "@/components/AddToCart";
+import { FaPlus } from "react-icons/fa6";
+import { FaMinus } from "react-icons/fa6";
 
 async function getProduct(slug) {
   const res = await fetch(`https://fakestoreapi.com/products/${slug}`);
@@ -28,8 +21,8 @@ export default async function ItemDetails({ params }) {
     (item) => item.category === product.category && item.id !== product.id
   );
   return (
-    <div>
-      <div className="max-w-[1000px] mx-auto bg-white shadow-sm px-7 md:px-14 md:my-20">
+    <div className="px-7 md:px-14 rounded">
+      <div className="max-w-[1000px] mx-auto rounded bg-white shadow-sm px-7 md:px-14 md:my-20">
         <div className="md:grid md:grid-cols-2 md:gap-20 mt-10 md:p-10">
           <div className="flex items-center justify-center">
             <Image
@@ -47,15 +40,7 @@ export default async function ItemDetails({ params }) {
               <p>+ Free Shipping</p>
             </div>
             <p className="text-zinc-700 text-lg mb-5">{product.description}</p>
-            <div className="flex items-center gap-4">
-              <input
-                type="number"
-                className="w-14 rounded py-1 pl-4 border text-black shadow-sm"
-              />
-              <button className="cursor-pointer py-1 px-7 rounded text-white duration-150 hover:bg-[#1B9C85] bg-[#1b9c84c9] w-fit">
-                ADD TO CART
-              </button>
-            </div>
+            <AddToCart productId={product.id} />
             <div className="h-[1px] my-5 w-full bg-zinc-300"></div>
             <div className="text-zinc-700 flex items-center gap-2">
               Category:

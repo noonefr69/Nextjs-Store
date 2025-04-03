@@ -19,6 +19,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import SheetCart from "./SheetCart";
 
 export default function Navbar() {
   const isActive = usePathname();
@@ -49,31 +50,7 @@ export default function Navbar() {
               </Link>
             ))}
           </div>
-          <span className="text-[#1B9C85] font-semibold mr-1 md:mr-3">
-            £0.00
-          </span>
-          <Sheet>
-            <SheetTrigger className={`cursor-pointer relative`}>
-              <MdOutlineShoppingCart className="text-2xl text-[#1B9C85]" />
-              <div className="h-4 w-4 text-sm font-semibold absolute -top-2 -right-2 bg-[#1B9C85] rounded-full text-black flex items-center justify-center">
-                0
-              </div>
-            </SheetTrigger>
-            <SheetContent className={``}>
-              <SheetHeader className={`border-b`}>
-                <SheetTitle>Shopping Cart</SheetTitle>
-              </SheetHeader>
-              <div className="h-full flex flex-col justify-center relative items-center">
-                <h1 className="text-zinc-700">No Products in the cart</h1>
-                <Link
-                  className="absolute bottom-4 bg-[#1b9c84de] duration-100 hover:bg-[#1B9C85] w-[90%] px-4 py-1 text-center rounded text-white"
-                  href={`/products`}
-                >
-                  Go Shopping
-                </Link>
-              </div>
-            </SheetContent>
-          </Sheet>
+          <SheetCart />
           <div className="block md:hidden ml-3">
             <DropdownMenu>
               <DropdownMenuTrigger className="ml-3 text-2xl bg-[#1B9C85] text-zinc-100 p-2 cursor-pointer rounded">
