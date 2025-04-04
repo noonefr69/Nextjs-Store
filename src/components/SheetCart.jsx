@@ -126,7 +126,7 @@ export default function SheetCart() {
               </Link>
               <Link
                 className="absolute bottom-4 bg-[#1b9c84de] duration-100 hover:bg-[#1B9C85] w-[90%] px-4 py-2 text-center rounded text-white"
-                href={`/products`}
+                href={`/cart`}
               >
                 CHECKOUT
               </Link>

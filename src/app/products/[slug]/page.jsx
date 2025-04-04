@@ -5,6 +5,7 @@ import { FaStar } from "react-icons/fa";
 import AddToCart from "@/components/AddToCart";
 import { FaPlus } from "react-icons/fa6";
 import { FaMinus } from "react-icons/fa6";
+import { auth } from "@/auth";
 
 async function getProduct(slug) {
   const res = await fetch(`https://fakestoreapi.com/products/${slug}`);
@@ -20,6 +21,11 @@ export default async function ItemDetails({ params }) {
   const relatedData = data.filter(
     (item) => item.category === product.category && item.id !== product.id
   );
+
+  const session = await auth();
+
+  const user = session?.user;
+
   return (
     <div className="px-7 md:px-14 rounded">
       <div className="max-w-[1000px] mx-auto rounded bg-white shadow-sm px-7 md:px-14 md:my-20">
@@ -79,7 +85,18 @@ export default async function ItemDetails({ params }) {
                 </p>
               </TabsContent>
               <TabsContent value="reviews">
-                Change your password here.
+                {user ? (
+                  <div className="mt-6 mb-12">
+                    <h1 className="text-2xl">There is no review</h1>
+                  </div>
+                ) : (
+                  <div className="mt-6 mb-12">
+                    <h1 className="text-2xl">
+                      You are nor signing it go sign in{" "}
+                      <Link className="bg-[#1B9C85] text-white px-2 py-1 rounded" href={`/account`}>Sign In</Link>
+                    </h1>
+                  </div>
+                )}
               </TabsContent>
             </Tabs>
           </div>

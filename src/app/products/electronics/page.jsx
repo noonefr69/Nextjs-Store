@@ -55,10 +55,10 @@ export default async function Products({ searchParams }) {
           <h1 className="block md:hidden text-4xl my-7 md:text-6xl text-[#1B9C85] md:mb-20">
             Shop
           </h1>
-          <h1 className="text-3xl mb-4 md:text-4xl font-semibold md:mb-5">
+          {/* <h1 className="text-3xl mb-4 md:text-4xl font-semibold md:mb-5">
             Filter by price
           </h1>
-          <PriceFilter />
+          <PriceFilter /> */}
 
           <div className="mt-10">
             <h1 className="font-semibold md:text-3xl mb-5">Catrgories</h1>
