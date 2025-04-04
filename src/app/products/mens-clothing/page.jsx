@@ -83,7 +83,7 @@ export default async function Products({ searchParams }) {
               <li className="flex items-center justify-between text-[#1b9c84d7]">
                 <Link
                   className="hover:underline"
-                  href={`/products/men's-clothing`}
+                  href={`/products/mens-clothing`}
                 >
                   men's clothing
                 </Link>
@@ -92,7 +92,7 @@ export default async function Products({ searchParams }) {
               <li className="flex items-center justify-between text-[#1b9c84d7]">
                 <Link
                   className="hover:underline"
-                  href={`/products/women's-clothing`}
+                  href={`/products/womens-clothing`}
                 >
                   women's clothing
                 </Link>
@@ -132,7 +132,7 @@ export default async function Products({ searchParams }) {
                 <DropdownMenuItem className={`m-0 p-0`}>
                   <Link
                     className="text-zinc-700  duration-150 hover:bg-[#00000008] rounded py-1 px-2 cursor-pointer w-full h-full"
-                    href="/products/men's-clothing"
+                    href="/products/mens-clothing"
                   >
                     Sort by default
                   </Link>
@@ -141,7 +141,7 @@ export default async function Products({ searchParams }) {
                   {" "}
                   <Link
                     className="text-zinc-700  duration-150 hover:bg-[#00000008] rounded py-1 px-2 cursor-pointer w-full h-full"
-                    href="/products/men's-clothing?sort=popularity"
+                    href="/products/mens-clothing?sort=popularity"
                   >
                     Sort by popularity
                   </Link>
@@ -150,7 +150,7 @@ export default async function Products({ searchParams }) {
                   {" "}
                   <Link
                     className="text-zinc-700  duration-150 hover:bg-[#00000008] rounded py-1 px-2 cursor-pointer w-full h-full"
-                    href="/products/men's-clothing?sort=lowToHigh"
+                    href="/products/mens-clothing?sort=lowToHigh"
                   >
                     Sort by price: low to high
                   </Link>
@@ -159,7 +159,7 @@ export default async function Products({ searchParams }) {
                   {" "}
                   <Link
                     className="text-zinc-700  duration-150 hover:bg-[#00000008] rounded py-1 px-2 cursor-pointer w-full h-full"
-                    href="/products/men's-clothing?sort=highToLow"
+                    href="/products/mens-clothing?sort=highToLow"
                   >
                     Sort by price: high to low
                   </Link>

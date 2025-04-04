@@ -70,7 +70,7 @@ export default async function Products({ searchParams }) {
               <li className="flex items-center justify-between text-[#1b9c84d7]">
                 <Link
                   className="hover:underline"
-                  href={`/products/men's-clothing`}
+                  href={`/products/mens-clothing`}
                 >
                   men's clothing
                 </Link>
@@ -79,7 +79,7 @@ export default async function Products({ searchParams }) {
               <li className="flex items-center justify-between text-[#1b9c84d7]">
                 <Link
                   className="hover:underline"
-                  href={`/products/women's-clothing`}
+                  href={`/products/womens-clothing`}
                 >
                   women's clothing
                 </Link>
@@ -154,31 +154,6 @@ export default async function Products({ searchParams }) {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            {/* <Select>
-              <SelectTrigger className="w-[210px] text-zinc-600 cursor-pointer rounded">
-                <SelectValue placeholder="Default" className="text-zinc-600" />
-              </SelectTrigger>
-              <SelectContent className={`w-[210px] rounded`} align="center">
-                <SelectItem value="default">
-                  <Link href="/products">Sort by default</Link>
-                </SelectItem>
-                <SelectItem value="popularity">
-                  <Link href="/products?sort=popularity">
-                    Sort by popularity
-                  </Link>
-                </SelectItem>
-                <SelectItem value="lowToHigh">
-                  <Link href="/products?sort=lowToHigh">
-                    Sort by price: low to high
-                  </Link>
-                </SelectItem>
-                <SelectItem value="HighToLow">
-                  <Link href="/products?sort=HighToLow">
-                    Sort by price: high to low
-                  </Link>
-                </SelectItem>
-              </SelectContent>
-            </Select> */}
           </nav>
           <div className="md:grid md:grid-cols-3 md:gap-4">
             {displayData.map((dat) => (

@@ -81,7 +81,7 @@ export default async function Products({ searchParams }) {
               <li className="flex items-center justify-between text-[#1b9c84d7]">
                 <Link
                   className="hover:underline"
-                  href={`/products/men's-clothing`}
+                  href={`/products/mens-clothing`}
                 >
                   men's clothing
                 </Link>
@@ -90,7 +90,7 @@ export default async function Products({ searchParams }) {
               <li className="flex items-center justify-between text-[#1b9c84d7]">
                 <Link
                   className="hover:underline"
-                  href={`/products/women's-clothing`}
+                  href={`/products/womens-clothing`}
                 >
                   women's clothing
                 </Link>
