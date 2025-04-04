@@ -3,12 +3,19 @@ import { IoIosMail } from "react-icons/io";
 import { FaPhone } from "react-icons/fa";
 import { ProfileForm } from "@/components/Form";
 
+export const metadata = {
+  title: "Contact",
+  description: "This is the contact page to get in touch with us.",
+};
+
 export default function Contact() {
   return (
     <div>
       <div className="max-w-[1440px] mx-auto px-7 md:px-14 mt-16 md:grid md:grid-cols-2">
         <div>
-          <h1 className="text-3xl font-semibold mb-4 md:mb-10 md:text-5xl md:font-bold">Say Hello.</h1>
+          <h1 className="text-3xl font-semibold mb-4 md:mb-10 md:text-5xl md:font-bold">
+            Say Hello.
+          </h1>
           <p className="text-zinc-700 md:max-w-[23rem] lg:max-w-[40rem]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
             tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.

@@ -10,6 +10,11 @@ import {
 import Image from "next/image";
 import { FcGoogle } from "react-icons/fc";
 
+export const metadata = {
+  title: "Account",
+  description: "This is the account page for the app ",
+};
+
 export default async function SignIn() {
   const session = await auth();
   console.log(session);

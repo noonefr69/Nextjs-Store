@@ -12,6 +12,11 @@ import {
 import { Slider } from "@/components/ui/slider";
 import { PriceFilter } from "@/components/PriceFilter";
 
+export const metadata = {
+  title: "Products",
+  description: "This is all the products we have. Check them out.",
+};
+
 export default async function Products({ searchParams }) {
   const res = await fetch("https://fakestoreapi.com/products");
   const data = await res.json();
@@ -153,7 +158,6 @@ export default async function Products({ searchParams }) {
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
-
           </nav>
           <div className="md:grid md:grid-cols-3 md:gap-4">
             {displayData.map((dat) => (

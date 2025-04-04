@@ -3,9 +3,28 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Link from "next/link";
 import { FaStar } from "react-icons/fa";
 import AddToCart from "@/components/AddToCart";
-import { FaPlus } from "react-icons/fa6";
-import { FaMinus } from "react-icons/fa6";
 import { auth } from "@/auth";
+
+export async function generateMetadata({ params, searchParams }, parent) {
+  // read route params
+  const { slug } = await params;
+
+  // fetch data
+  const product = await fetch(`https://fakestoreapi.com/products/${slug}`).then(
+    (res) => res.json()
+  );
+
+  // optionally access and extend (rather than replace) parent metadata
+  const previousImages = (await parent).openGraph?.images || [];
+
+  return {
+    title: product.title,
+    description: product.description,
+    openGraph: {
+      images: ["/some-specific-page-image.jpg", ...previousImages],
+    },
+  };
+}
 
 async function getProduct(slug) {
   const res = await fetch(`https://fakestoreapi.com/products/${slug}`);
@@ -95,7 +114,7 @@ export default async function ItemDetails({ params }) {
                 ) : (
                   <div className="mt-6 mb-12">
                     <h1 className="text-2xl">
-                      You are nor signing it go sign in{" "}
+                      You are nor signing it go{" "}
                       <Link
                         className="bg-[#1B9C85] text-white px-2 py-1 rounded"
                         href={`/account`}

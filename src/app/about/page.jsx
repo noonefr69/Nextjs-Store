@@ -19,6 +19,11 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 
+export const metadata = {
+  title: "About",
+  description: "About Nextjs Store that built by a junior developer",
+};
+
 export default function About() {
   return (
     <div className="">

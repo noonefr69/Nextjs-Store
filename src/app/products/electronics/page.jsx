@@ -19,6 +19,11 @@ import {
 import { Slider } from "@/components/ui/slider";
 import { PriceFilter } from "@/components/PriceFilter";
 
+export const metadata = {
+  title: "Electronics",
+  description: "Shop electronics products",
+}
+
 export default async function Products({ searchParams }) {
   const res = await fetch("https://fakestoreapi.com/products");
   const data = await res.json();
