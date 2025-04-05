@@ -24,7 +24,9 @@ export const metadata = {
   description: "About Nextjs Store that built by a junior developer",
 };
 
-export default function About() {
+export default async function About() {
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+
   return (
     <div className="">
       <div className="flex flex-col items-center">

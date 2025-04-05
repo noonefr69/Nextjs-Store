@@ -8,7 +8,9 @@ export default async function Clients() {
 
   return (
     <div className="mt-28 px-7 md:px-14 max-w-[1440px] mx-auto">
-      <h1 className="text-center font-bold text-2xl md:text-4xl">Our Happy Clients!</h1>
+      <h1 className="text-center font-bold text-2xl md:text-4xl">
+        Our Happy Clients!
+      </h1>
       <div className="h-[3px] mx-auto my-7 mb-16 w-7 bg-[#1B9C85]" />
       <div className="flex flex-col md:flex-row items-center gap-7">
         <div className="shadow-sm p-8 bg-white rounded-lg flex flex-col gap-4 mb-7 md:mb-0">
@@ -28,6 +30,7 @@ export default async function Clients() {
               alt="img"
               width={60}
               height={10}
+              loading="lazy"
             />
             <h6 className="font-semibold">Diana Burnwood</h6>
           </div>
@@ -51,6 +54,7 @@ export default async function Clients() {
               alt="img"
               width={60}
               height={10}
+              loading="lazy"
             />
             <h6 className="font-semibold">Jessica Fox</h6>
           </div>
@@ -74,6 +78,7 @@ export default async function Clients() {
               alt="img"
               width={60}
               height={10}
+              loading="lazy"
             />
             <h6 className="font-semibold">Lily Granger​</h6>
           </div>

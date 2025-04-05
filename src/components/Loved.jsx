@@ -15,7 +15,7 @@ export default async function Loved() {
       </h1>
       <div className="h-[3px] mx-auto my-7 mb-16 w-7 bg-[#1B9C85]" />
       <div className="flex flex-col text-center md:flex-row md:gap-10">
-        {dataFilter.slice(0,4).map((dat) => (
+        {dataFilter.slice(0, 4).map((dat) => (
           <Link
             className="flex flex-col items-center w-full mx-auto shadow-sm p-2 rounded mb-7 md:mb-0"
             key={dat.id}
@@ -27,6 +27,7 @@ export default async function Loved() {
               width={500}
               height={500}
               alt={dat.title}
+              loading="lazy"
             />
             <div className="flex flex-col h-full justify-between">
               <h6 className="mt-3 mb-4 text-zinc-500 capitalize">

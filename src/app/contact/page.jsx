@@ -8,7 +8,9 @@ export const metadata = {
   description: "This is the contact page to get in touch with us.",
 };
 
-export default function Contact() {
+export default async function Contact() {
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+
   return (
     <div>
       <div className="max-w-[1440px] mx-auto px-7 md:px-14 mt-16 md:grid md:grid-cols-2">

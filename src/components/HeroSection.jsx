@@ -5,8 +5,8 @@ export default function HeroSection() {
   return (
     <div className="bg-zinc-100 ">
       {" "}
-      <div className="mt-16 md:mt-0 px-7 md:px-14 flex flex-col md:flex-row md:items-center md:gap-4 max-w-[1440px] mx-auto">
-        <div className="md:w-1/2"> 
+      <div className="pt-28 md:pt-0 px-7 md:px-14 flex flex-col md:flex-row md:items-center md:gap-4 max-w-[1440px] mx-auto">
+        <div className="md:w-1/2">
           <h3 className="mb-3 md:text-2xl text-[#415161] font-semibold text-lg">
             Best Quality Products
           </h3>
@@ -28,6 +28,7 @@ export default function HeroSection() {
             className="w-full"
             width={538}
             height={400}
+            loading="lazy"
           />
         </div>
       </div>

@@ -26,6 +26,7 @@ export default async function Featured() {
               width={500}
               height={500}
               alt={dat.title}
+              loading="lazy"
             />
             <div className="flex flex-col justify-between h-full">
               <h6 className="mt-3 mb-4 md:m-0 text-zinc-500 capitalize">

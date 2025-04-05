@@ -24,7 +24,7 @@ export default function Navbar() {
     { label: "Account", href: "/account" },
   ];
   return (
-    <div className="bg-zinc-100 ">
+    <div className="bg-zinc-100 fixed top-0 left-0 right-0 z-50 shadow-md md:shadow-none md:relative">
       <nav className="flex items-center justify-between px-7 py-4 border-b md:border-none md:px-14 md:py-8 max-w-[1440px] mx-auto">
         <Link href={`/`}>
           <RxSketchLogo className="text-[#1B9C85] text-4xl" />
