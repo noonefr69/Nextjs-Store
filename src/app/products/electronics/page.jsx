@@ -22,7 +22,7 @@ import { PriceFilter } from "@/components/PriceFilter";
 export const metadata = {
   title: "Electronics",
   description: "Shop electronics products",
-}
+};
 
 export default async function Products({ searchParams }) {
   const res = await fetch("https://fakestoreapi.com/products");
@@ -183,6 +183,7 @@ export default async function Products({ searchParams }) {
                   width={500}
                   height={500}
                   alt={dat.title}
+                  loading="lazy"
                 />
                 <div className="flex flex-col h-full justify-between">
                   <h6 className="mt-3 mb-4 text-zinc-500 capitalize">

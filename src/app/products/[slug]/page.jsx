@@ -56,6 +56,7 @@ export default async function ItemDetails({ params }) {
               className="mb-7 md:mb-0"
               width={300}
               height={250}
+              loading="lazy"
             />
           </div>
           <div>
