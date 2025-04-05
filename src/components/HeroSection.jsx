@@ -28,7 +28,6 @@ export default function HeroSection() {
             className="w-full"
             width={538}
             height={400}
-            loading="lazy"
           />
         </div>
       </div>

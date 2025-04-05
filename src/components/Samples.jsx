@@ -22,7 +22,6 @@ export default function Samples() {
             alt="img1"
             width={500}
             height={500}
-            loading="lazy"
           />
         </div>
         <div className="flex flex-col items-center relative ">

@@ -46,7 +46,7 @@ export default async function ItemDetails({ params }) {
   const user = session?.user;
 
   return (
-    <div className="px-7 md:px-14 rounded">
+    <div className="px-7 pt-20 md:pt-0 md:px-14 rounded">
       <div className="max-w-[1000px] mx-auto rounded bg-white shadow-sm px-7 md:px-14 md:my-20">
         <div className="md:grid md:grid-cols-2 md:gap-20 mt-10 md:p-10">
           <div className="flex items-center justify-center">
