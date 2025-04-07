@@ -30,7 +30,6 @@ export default async function Clients() {
               alt="img"
               width={60}
               height={10}
-              loading="lazy"
             />
             <h6 className="font-semibold">Diana Burnwood</h6>
           </div>
@@ -54,7 +53,6 @@ export default async function Clients() {
               alt="img"
               width={60}
               height={10}
-              loading="lazy"
             />
             <h6 className="font-semibold">Jessica Fox</h6>
           </div>
@@ -78,7 +76,6 @@ export default async function Clients() {
               alt="img"
               width={60}
               height={10}
-              loading="lazy"
             />
             <h6 className="font-semibold">Lily Granger​</h6>
           </div>

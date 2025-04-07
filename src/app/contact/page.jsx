@@ -12,7 +12,7 @@ export default async function Contact() {
   await new Promise((resolve) => setTimeout(resolve, 1000));
 
   return (
-    <div>
+    <div className="pt-24 md:pt-0">
       <div className="max-w-[1440px] mx-auto px-7 md:px-14 mt-16 md:grid md:grid-cols-2">
         <div>
           <h1 className="text-3xl font-semibold mb-4 md:mb-10 md:text-5xl md:font-bold">

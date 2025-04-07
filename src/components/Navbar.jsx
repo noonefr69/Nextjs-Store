@@ -87,7 +87,7 @@ export default function Navbar() {
                 <DropdownMenuItem>
                   <Link
                     className="uppercase w-full h-full p-2 duration-150 font-semibold border-none outline-none rounded"
-                    href={`/`}
+                    href={`/account`}
                   >
                     Account
                   </Link>

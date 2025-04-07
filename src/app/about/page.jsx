@@ -30,7 +30,7 @@ export default async function About() {
   return (
     <div className="">
       <div className="flex flex-col items-center">
-        <div className="bg-zinc-100 py-28 text-center px-7 md:px-14 w-full">
+        <div className="pt-40 md:pt-0 bg-zinc-100 py-28 text-center px-7 md:px-14 w-full">
           <h1 className="text-3xl font-semibold text-zinc-800 md:text-5xl md:font-bold">
             About Us
           </h1>

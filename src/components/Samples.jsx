@@ -22,7 +22,6 @@ export default function Samples() {
             alt="img1"
             width={500}
             height={500}
-            placeholder="blur"
           />
         </div>
         <div className="flex flex-col items-center relative ">
@@ -38,7 +37,6 @@ export default function Samples() {
             alt="img2"
             width={500}
             height={500}
-            placeholder="blur"
           />
         </div>
         <div className="flex flex-col md:gap-4 md:flex-col-reverse items-center">
@@ -57,7 +55,6 @@ export default function Samples() {
             alt="img3"
             width={500}
             height={500}
-            placeholder="blur"
           />
         </div>
       </div>

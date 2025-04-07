@@ -22,7 +22,7 @@ export default async function SignIn() {
 
   return user ? (
     <>
-      <Card className={`mx-auto w-96 my-20 text-center`}>
+      <Card className={`mx-auto w-96 my-30 mt-40 text-center`}>
         <CardHeader className={`mb-10`}>
           <CardTitle className={`text-4xl mb-2`}>
             Welcome {user?.name}
@@ -63,7 +63,7 @@ export default async function SignIn() {
     </>
   ) : (
     <>
-      <Card className={`mx-auto w-96 my-20 text-center`}>
+      <Card className={`mx-auto w-96 my-30 mt-40 text-center`}>
         <CardHeader className={`mb-10`}>
           <CardTitle className={`text-4xl mb-2`}>Sign up</CardTitle>
           <CardDescription>Sign up for more features</CardDescription>

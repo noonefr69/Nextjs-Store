@@ -14,7 +14,6 @@ export default function FeaturedIn() {
           alt="logo"
           width={100}
           height={100}
-          loading="lazy"
         />
         <Image
           className="w-full opacity-70 duration-150 hover:opacity-100 ~p-10/60"
@@ -22,7 +21,6 @@ export default function FeaturedIn() {
           alt="logo"
           width={100}
           height={100}
-          loading="lazy"
         />
         <Image
           className="w-full opacity-70 duration-150 hover:opacity-100 ~p-10/60"
@@ -30,7 +28,6 @@ export default function FeaturedIn() {
           alt="logo"
           width={100}
           height={100}
-          loading="lazy"
         />
         <Image
           className="w-full opacity-70 duration-150 hover:opacity-100 ~p-10/60"
@@ -38,7 +35,6 @@ export default function FeaturedIn() {
           alt="logo"
           width={100}
           height={100}
-          loading="lazy"
         />
         <Image
           className="w-full opacity-70 duration-150 hover:opacity-100 ~p-10/60"
@@ -46,7 +42,6 @@ export default function FeaturedIn() {
           alt="logo"
           width={100}
           height={100}
-          loading="lazy"
         />
       </div>
     </div>
