@@ -115,7 +115,7 @@ export default async function ItemDetails({ params }) {
                 ) : (
                   <div className="mt-6 mb-12">
                     <h1 className="text-2xl">
-                      You are nor signing it go{" "}
+                      You are not signing it go{" "}
                       <Link
                         className="bg-[#1B9C85] text-white px-2 py-1 rounded"
                         href={`/account`}

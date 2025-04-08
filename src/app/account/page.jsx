@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/card";
 import Image from "next/image";
 import { FcGoogle } from "react-icons/fc";
+import { FaGithub } from "react-icons/fa";
 
 export const metadata = {
   title: "Account",
@@ -71,20 +72,36 @@ export default async function SignIn() {
         <CardContent
           className={`mb-10 text-center flex items-center justify-center`}
         >
-          <form
-            className="text-center"
-            action={async () => {
-              "use server";
-              await signIn("google");
-            }}
-          >
-            <button
-              type="submit"
-              className="flex text-xl rounded cursor-pointer duration-150 hover:border-[#00000069] hover:shadow-md items-center px-4 py-2 border shadow-sm gap-4 "
+          <div>
+            <form
+              className="text-center"
+              action={async () => {
+                "use server";
+                await signIn("google");
+              }}
             >
-              <FcGoogle className="text-xl" /> Sign up with Google{" "}
-            </button>
-          </form>
+              <button
+                type="submit"
+                className="flex mb-4 text-xl rounded cursor-pointer duration-150 hover:border-[#00000069] hover:shadow-md items-center px-4 py-2 border shadow-sm gap-4 "
+              >
+                <FcGoogle className="text-xl" /> Sign up with Google{" "}
+              </button>
+            </form>
+            <form
+              className="text-center"
+              action={async () => {
+                "use server";
+                await signIn("github");
+              }}
+            >
+              <button
+                type="submit"
+                className="flex text-xl rounded cursor-pointer duration-150 hover:border-[#00000069] hover:shadow-md items-center px-4 py-2 border shadow-sm gap-4 "
+              >
+                <FaGithub className="text-xl" /> Sign up with Github{" "}
+              </button>
+            </form>
+          </div>
         </CardContent>
         <CardFooter className={`text-center flex items-center justify-center`}>
           <p>It is free :D</p>
