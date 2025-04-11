@@ -6,7 +6,8 @@ export default function Loading() {
       <AiOutlineLoading3Quarters className="animate-spin text-8xl text-zinc-500" />
       {/* add this to redeploy
       github work correct now test google 
-      test again*/}
+      test again
+      and again*/}
     </div>
   );
 }
