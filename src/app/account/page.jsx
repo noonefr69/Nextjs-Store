@@ -73,7 +73,7 @@ export default async function SignIn() {
           className={`mb-10 text-center flex items-center justify-center`}
         >
           <div>
-            <form
+            {/* <form
               className="text-center"
               action={async () => {
                 "use server";
@@ -86,7 +86,7 @@ export default async function SignIn() {
               >
                 <FcGoogle className="text-xl" /> Sign up with Google{" "}
               </button>
-            </form>
+            </form> */}
             <form
               className="text-center"
               action={async () => {
